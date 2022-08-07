@@ -22,6 +22,19 @@ if [ ! -d .repo/local_manifests ] ; then
 
 	ln -s ../../../scripts/scripts/remove-projects-aosp.xml .repo/local_manifests/remove-projects.xml
 fi
+
+if [ ! -L The-Muppets ] ; then
+	ln -s ../the-muppets/The-Muppets The-Muppets
+fi
+if [ ! -L TheMuppets ] ; then
+	ln -s ../muppets/TheMuppets TheMuppets
+fi
+if [ ! -L LineageOS ] ; then
+	ln -s ../lineage/LineageOS LineageOS
+fi
+if [ ! -L CalyxOS ] ; then
+	ln -s ../calyx/CalyxOS CalyxOS
+fi
 popd
 
 pushd ${MIRROR_ROOT}/lineage
