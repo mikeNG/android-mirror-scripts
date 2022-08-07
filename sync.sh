@@ -10,8 +10,8 @@ cd ../../
 
 repo sync -j64 -vv --fail-fast
 
-scripts/lineage-metadata-regen.sh
-scripts/calyx-metadata-regen.sh
+./lineage-metadata-regen.sh
+./calyx-metadata-regen.sh
 popd
 
 # Sync linux and linux-stable kernels
@@ -57,8 +57,8 @@ popd
 
 # Sync LineageOS mirror and set up alternates to AOSP and kernel mirrors
 pushd ${MIRROR_ROOT}/scripts
-scripts/aosp-mirror-to-lineage.sh
-scripts/kernel-mirror-to-lineage.sh
+./aosp-mirror-to-lineage.sh
+./kernel-mirror-to-lineage.sh
 popd
 
 pushd ${MIRROR_ROOT}/lineage
@@ -71,8 +71,8 @@ popd
 
 # Sync CalyxOS mirror and set up alternates to AOSP and kernel mirrors
 pushd ${MIRROR_ROOT}/scripts
-scripts/aosp-mirror-to-calyx.sh
-scripts/kernel-mirror-to-calyx.sh
+./aosp-mirror-to-calyx.sh
+./kernel-mirror-to-calyx.sh
 popd
 
 pushd ${MIRROR_ROOT}/calyx
