@@ -10,8 +10,8 @@ cd ../../
 
 repo sync -j64 -vv --fail-fast
 
-./lineage-metadata-regen.sh
-./calyx-metadata-regen.sh
+./kernel-metadata-regen-lineage.sh
+./kernel-metadata-regen-calyx.sh
 popd
 
 # Sync linux and linux-stable kernels
