@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch=".." />
+
+  <default revision="main"
+           remote="github"
+           sync-j="4" />
+
+  <project path="scripts" name="mikeNG/android-mirror-scripts" >
+    <linkfile src="sync.sh" dest="sync.sh" />
+  </project>
+
+  <project path="calyx-mirror-manifest" name="CalyxOS/mirror_manifest" />
+  <project path="lineage-mirror-manifest" name="LineageOS/mirror" revision="master" />
+  <project path="kernel-mirror-manifest" name="mikeNG/kernel-mirror" revision="master" />
+</manifest>
