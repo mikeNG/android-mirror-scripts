@@ -16,6 +16,12 @@ pushd ${MIRROR_ROOT}/aosp
 if [ ! -d .repo ] ; then
 	repo init -u https://android.googlesource.com/mirror/manifest --mirror
 fi
+
+if [ ! -d .repo/local_manifests ] ; then
+	mkdir -p .repo/local_manifests
+
+	ln -s ../../../scripts/scripts/remove-projects-aosp.xml .repo/local_manifests/remove-projects.xml
+fi
 popd
 
 pushd ${MIRROR_ROOT}/lineage
@@ -43,6 +49,12 @@ popd
 pushd ${MIRROR_ROOT}/calyx
 if [ ! -d .repo ] ; then
 	repo init -u https://gitlab.com/CalyxOS/mirror_manifest --mirror
+fi
+
+if [ ! -d .repo/local_manifests ] ; then
+	mkdir -p .repo/local_manifests
+
+	ln -s ../manifests/proprietary.xml .repo/local_manifests/proprietary.xml
 fi
 
 for aosp_folder in ${AOSP_FOLDERS}; do

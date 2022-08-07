@@ -50,6 +50,10 @@ for aosp_project in ${AOSP_PROJECTS}; do
 		echo ${KERNEL_MIRROR}/${STABLE_LINUX}/objects >> "${aosp_project}.git/objects/info/alternates"
 		echo ${KERNEL_MIRROR}/${GOOGLE_COMMON}/objects >> "${aosp_project}.git/objects/info/alternates"
 	fi
+
+	if [ ! -L "${MIRROR_ROOT}/aosp/${aosp_project}.git" ] ; then
+		ln -s "../../kernel/aosp/${aosp_project}.git" "${MIRROR_ROOT}/aosp/${aosp_project}.git"
+	fi
 done
 popd
 
