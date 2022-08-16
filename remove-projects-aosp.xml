@@ -209,7 +209,6 @@
   <remove-project name="trusty/external/qemu-keycodemapdb" />
   <remove-project name="trusty/external/trusted-firmware-a" />
   <remove-project name="trusty/external/trusty" />
-  <remove-project name="trusty/keymint" />
   <remove-project name="trusty/lib" />
   <remove-project name="trusty/lk/common" />
   <remove-project name="trusty/lk/nxp" />
