@@ -2,6 +2,8 @@
 
 MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
 
+export REPO_TRACE=0
+
 # Sync the scripts and required manifests
 pushd ${MIRROR_ROOT}/scripts
 repo sync -j64 -vv --fail-fast
