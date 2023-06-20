@@ -27,12 +27,14 @@
   <remove-project name="device/google/crosshatch-kernel" />
   <remove-project name="device/google/cuttlefish_kernel" />
   <remove-project name="device/google/dragon-kernel" />
+  <remove-project name="device/google/lynx-kernel" />
   <remove-project name="device/google/marlin-kernel" />
   <remove-project name="device/google/pantah-kernel" />
   <remove-project name="device/google/raviole-kernel" />
   <remove-project name="device/google/redbull-kernel" />
   <remove-project name="device/google/redfin-kernel" />
   <remove-project name="device/google/sunfish-kernel" />
+  <remove-project name="device/google/tangorpro-kernel" />
   <remove-project name="device/google/wahoo-kernel" />
   <remove-project name="device/htc/flounder-kernel" />
   <remove-project name="device/huawei/angler-kernel" />
@@ -51,6 +53,8 @@
   <remove-project name="kernel/prebuilts/5.10/x86-64" />
   <remove-project name="kernel/prebuilts/5.15/arm64" />
   <remove-project name="kernel/prebuilts/5.15/x86-64" />
+  <remove-project name="kernel/prebuilts/6.1/arm64" />
+  <remove-project name="kernel/prebuilts/6.1/x86-64" />
   <remove-project name="kernel/prebuilts/mainline/arm64" />
   <remove-project name="kernel/prebuilts/mainline/x86-64" />
   <remove-project name="platform/prebuilts/qemu-kernel" />
