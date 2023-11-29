@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+MIRROR_ROOT=${MIRROR_ROOT:=../../}
 
 export REPO_TRACE=0
 
@@ -29,7 +29,7 @@ popd
 pushd ${MIRROR_ROOT}/kernel/caf
 # TODO: fix this once repo supports refs removal in git config
 #repo sync -j64 -vv --fail-fast
-ls -d kernel/*.git | parallel -j64 git -C {} fetch clo
+ls -d kernel/*.git | parallel -j64 git -C {} fetch
 popd
 
 # Sync AOSP mirror

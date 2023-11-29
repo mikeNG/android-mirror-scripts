@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+MIRROR_ROOT=${MIRROR_ROOT:=../../}
 
 AOSP_MIRROR=${MIRROR_ROOT}/aosp
 CALYX_MIRROR=${MIRROR_ROOT}/calyx

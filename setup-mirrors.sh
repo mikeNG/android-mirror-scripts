@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+MIRROR_ROOT=${MIRROR_ROOT:=../../}
 
 MIRRORS="aosp lineage calyx muppets the-muppets"
 

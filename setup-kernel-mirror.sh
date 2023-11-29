@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+MIRROR_ROOT=${MIRROR_ROOT:=../../}
 
 KERNEL_MIRROR=${MIRROR_ROOT}/kernel
 TORVALDS_LINUX=linux/torvalds/linux.git

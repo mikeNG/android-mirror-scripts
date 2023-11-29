@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+MIRROR_ROOT=${MIRROR_ROOT:=../../}
 
 LINEAGE_MIRROR=${MIRROR_ROOT}/lineage
 MIRROR_MANIFEST=${MIRROR_ROOT}/scripts/lineage-mirror-manifest
