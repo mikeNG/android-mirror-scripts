@@ -18,6 +18,7 @@ kernels=`grep 'CalyxOS/kernel' ${MIRROR_MANIFEST}/default.xml | grep -v \
 echo -e "declare -A kernel_map\n" > ${KERNEL_MIRROR_MANIFEST}/calyx-metadata
 
 for kernel in $kernels; do
+	(
 	# set current VERSION, PATCHLEVEL
 	# force $TMPFILEs below to be in local directory: a slash character prevents
 	# the dot command from using the search path.
@@ -28,7 +29,7 @@ for kernel in $kernels; do
 	rm -f $TMPFILE*
 	if [ -z "$VERSION" -o -z "$PATCHLEVEL" ] ; then
 		echo "unable to determine current kernel version for" $kernel >&2
-		continue;
+		exit;
 	fi
 
 	KERNEL_VERSION="$VERSION.$PATCHLEVEL"
@@ -37,4 +38,7 @@ for kernel in $kernels; do
 
 	unset VERSION
 	unset PATCHLEVEL
+	) &
 done
+
+wait
