@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_PATH="$(cd "$(dirname "$0")";pwd -P)"
+SCRIPT_PATH="$(cd "$(dirname "$(readlink -f "$0")")";pwd -P)"
 MIRROR_ROOT="${SCRIPT_PATH}/../.."
 
 export REPO_TRACE=0
