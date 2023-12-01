@@ -6,7 +6,13 @@ CALYX_MIRROR=${MIRROR_ROOT}/calyx
 MIRROR_MANIFEST=${MIRROR_ROOT}/scripts/calyx-mirror-manifest
 KERNEL_MIRROR_MANIFEST=${MIRROR_ROOT}/scripts/kernel-mirror-manifest
 
-kernels=`grep 'CalyxOS/kernel' ${MIRROR_MANIFEST}/default.xml | grep -v -e 'kernel_build' -e 'kernel_manifest' -e 'drivers_staging' -e 'techpack_audio' -e 'kernel_devices' | sed -e 's#  <project name="CalyxOS/##g' -e 's#" />##g'`
+kernels=`grep 'CalyxOS/kernel' ${MIRROR_MANIFEST}/default.xml | grep -v \
+-e 'drivers_staging' \
+-e 'kernel_build' \
+-e 'kernel_devices' \
+-e 'kernel_manifest' \
+-e 'techpack_audio' \
+| sed -e 's#  <project name="CalyxOS/##g' -e 's#" />##g'`
 
 echo -e "declare -A kernel_map\n" > ${KERNEL_MIRROR_MANIFEST}/calyx-metadata
 
