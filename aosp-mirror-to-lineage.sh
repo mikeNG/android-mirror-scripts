@@ -1,6 +1,7 @@
 #!/bin/bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+SCRIPT_PATH="$(cd "$(dirname "$0")";pwd -P)"
+MIRROR_ROOT="${SCRIPT_PATH}/../.."
 
 AOSP_MIRROR=${MIRROR_ROOT}/aosp
 LINEAGE_MIRROR=${MIRROR_ROOT}/lineage

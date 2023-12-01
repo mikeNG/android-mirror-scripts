@@ -4,8 +4,6 @@ This repository is intended to be used for automated setup and sync of AOSP/Line
 
 It is designed to save as much space as possible while keeping the majority of repositories synced. This is done by linking LineageOS/CalyxOS git alternates to AOSP mirror and linking all kernels to upstream linux/linux-stable, google common kernel and QCOM kernel git alternates. You can read through the scripts for more info.
 
-The default root path is `/mnt/mirrors` which can be customized by exporting `MIRROR_ROOT=/your/path`.
-
 Setting the mirrors up:
 ```
 mkdir -p /mnt/mirrors/scripts

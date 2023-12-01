@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+SCRIPT_PATH="$(cd "$(dirname "$0")";pwd -P)"
+MIRROR_ROOT="${SCRIPT_PATH}/../.."
 
 MIRRORS="aosp lineage calyx muppets the-muppets"
 

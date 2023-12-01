@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-MIRROR_ROOT=${MIRROR_ROOT:=/mnt/mirrors}
+SCRIPT_PATH="$(cd "$(dirname "$0")";pwd -P)"
+MIRROR_ROOT="${SCRIPT_PATH}/../.."
 
 KERNEL_MIRROR=${MIRROR_ROOT}/kernel
 TORVALDS_LINUX=linux/torvalds/linux.git
