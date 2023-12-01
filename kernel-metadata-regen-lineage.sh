@@ -15,6 +15,7 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'kernel_configs' \
 -e 'kernel_letv_msm8994' \
 -e 'kernel_nvidia_cypress-fmac' \
+-e 'kernel_nvidia_display' \
 -e 'kernel_nvidia_linux-4.9_kernel_nvgpu' \
 -e 'kernel_nvidia_linux-4.9_kernel_nvidia' \
 -e 'kernel_nvidia_mainline' \
@@ -36,6 +37,10 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'htc-kernel-msm8660' \
 -e 'geeksphone-kernel-zero' \
 -e 'prebuilts_clang_kernel' \
+-e 'sm8450-devicetrees' \
+-e 'sm8550-devicetrees' \
+-e 'sm8450-modules' \
+-e 'sm8550-modules' \
 | sed -e 's#  <project name="LineageOS/##g' -e 's#" />##g'`
 
 echo -e "declare -A kernel_map\n" > ${KERNEL_MIRROR_MANIFEST}/lineage-metadata

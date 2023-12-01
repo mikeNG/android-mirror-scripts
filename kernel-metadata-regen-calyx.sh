@@ -9,6 +9,7 @@ KERNEL_MIRROR_MANIFEST=${MIRROR_ROOT}/scripts/kernel-mirror-manifest
 kernels=`grep 'CalyxOS/kernel' ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'drivers_staging' \
 -e 'kernel_build' \
+-e 'kernel_configs' \
 -e 'kernel_devices' \
 -e 'kernel_manifest' \
 -e 'techpack_audio' \
