@@ -11,7 +11,7 @@ GOOGLE_COMMON=aosp/kernel/common.git
 MIRRORS="linux aosp caf"
 
 AOSP_PROJECTS="kernel/arm64 kernel/exynos kernel/goldfish kernel/gs kernel/hikey-linaro kernel/mediatek kernel/msm kernel/omap kernel/samsung kernel/tegra kernel/x86_64 kernel/x86"
-CAF_PROJECTS="kernel/msm kernel/msm-3.10 kernel/msm-3.18 kernel/msm-4.4 kernel/msm-4.9 kernel/msm-4.14 kernel/msm-4.19 kernel/msm-5.4 kernel/msm-5.10"
+CLO_PROJECTS="kernel/msm kernel/msm-3.10 kernel/msm-3.18 kernel/msm-4.4 kernel/msm-4.9 kernel/msm-4.14 kernel/msm-4.19 kernel/msm-5.4 kernel/msm-5.10 kernel/msm-5.15"
 
 for mirror in ${MIRRORS}; do
 	if [ ! -d ${KERNEL_MIRROR}/${mirror} ] ; then
@@ -63,13 +63,13 @@ if [ ! -d .repo ] ; then
 	repo init -u https://github.com/mikeNG/kernel-mirror --mirror --manifest-name caf.xml
 fi
 
-for caf_project in ${CAF_PROJECTS}; do
-	if [ ! -d "${caf_project}.git" ] ; then
-		mkdir -p "${caf_project}.git"
-		GIT_DIR="${caf_project}.git" git init --bare
-		echo ${KERNEL_MIRROR}/${TORVALDS_LINUX}/objects > "${caf_project}.git/objects/info/alternates"
-		echo ${KERNEL_MIRROR}/${STABLE_LINUX}/objects >> "${caf_project}.git/objects/info/alternates"
-		echo ${KERNEL_MIRROR}/${GOOGLE_COMMON}/objects >> "${caf_project}.git/objects/info/alternates"
+for clo_project in ${CLO_PROJECTS}; do
+	if [ ! -d "${clo_project}.git" ] ; then
+		mkdir -p "${clo_project}.git"
+		GIT_DIR="${clo_project}.git" git init --bare
+		echo ${KERNEL_MIRROR}/${TORVALDS_LINUX}/objects > "${clo_project}.git/objects/info/alternates"
+		echo ${KERNEL_MIRROR}/${STABLE_LINUX}/objects >> "${clo_project}.git/objects/info/alternates"
+		echo ${KERNEL_MIRROR}/${GOOGLE_COMMON}/objects >> "${clo_project}.git/objects/info/alternates"
 	fi
 done
 popd
