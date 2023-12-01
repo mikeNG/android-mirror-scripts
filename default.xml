@@ -13,6 +13,6 @@
   </project>
 
   <project path="calyx-mirror-manifest" name="CalyxOS/mirror_manifest" />
-  <project path="lineage-mirror-manifest" name="LineageOS/mirror" revision="master" />
-  <project path="kernel-mirror-manifest" name="mikeNG/kernel-mirror" revision="master" />
+  <project path="lineage-mirror-manifest" name="LineageOS/mirror" />
+  <project path="kernel-mirror-manifest" name="mikeNG/kernel-mirror" />
 </manifest>
