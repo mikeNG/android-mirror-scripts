@@ -67,6 +67,7 @@ for clo_project in ${CLO_PROJECTS}; do
 	if [ ! -d "${clo_project}.git" ] ; then
 		mkdir -p "${clo_project}.git"
 		GIT_DIR="${clo_project}.git" git init --bare
+		GIT_DIR="${clo_project}.git" git remote add clo https://git.codelinaro.org/clo/la/"${clo_project}.git"
 		echo ${KERNEL_MIRROR}/${TORVALDS_LINUX}/objects > "${clo_project}.git/objects/info/alternates"
 		echo ${KERNEL_MIRROR}/${STABLE_LINUX}/objects >> "${clo_project}.git/objects/info/alternates"
 		echo ${KERNEL_MIRROR}/${GOOGLE_COMMON}/objects >> "${clo_project}.git/objects/info/alternates"
