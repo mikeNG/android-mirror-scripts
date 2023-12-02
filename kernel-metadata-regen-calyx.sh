@@ -42,4 +42,7 @@ for kernel in $kernels; do
 	) &
 done
 
+# https://stackoverflow.com/questions/14562423/is-there-a-way-to-ignore-header-lines-in-a-unix-sort
+awk 'NR<3{print $0;next}{print $0| "sort"}' ${KERNEL_MIRROR_MANIFEST}/calyx-metadata | sponge ${KERNEL_MIRROR_MANIFEST}/calyx-metadata
+
 wait

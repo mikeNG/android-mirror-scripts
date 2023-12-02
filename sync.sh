@@ -5,8 +5,8 @@ MIRROR_ROOT="${SCRIPT_PATH}/../.."
 
 export REPO_TRACE=0
 
-# Default to repo sync -j64
-SYNC_JOBS=64
+# Default to repo sync -j`nproc`
+SYNC_JOBS=`nproc`
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
