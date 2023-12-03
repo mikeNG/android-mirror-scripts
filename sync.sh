@@ -8,11 +8,11 @@ export REPO_TRACE=0
 # Default to repo sync -j`nproc`
 SYNC_JOBS=`nproc`
 
-while [ "${#}" -gt 0 ]; do
-    case "${1}" in
-        -j | --jobs )
-                SYNC_JOBS="${2}";
-                ;;
+while getopts 'j:' OPTION; do
+    case "$OPTION" in
+        j)
+            SYNC_JOBS=$OPTARG
+            ;;
     esac
     shift
 done
