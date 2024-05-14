@@ -19,6 +19,7 @@
   <remove-project name="device/amlogic/yukawa-kernel" />
   <remove-project name="device/asus/flo-kernel" />
   <remove-project name="device/asus/fugu-kernel" />
+  <remove-project name="device/google/akita-kernel" />
   <remove-project name="device/google/barbet-kernel" />
   <remove-project name="device/google/bluejay-kernel" />
   <remove-project name="device/google/bonito-kernel" />
