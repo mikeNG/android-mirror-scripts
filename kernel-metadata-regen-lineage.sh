@@ -40,8 +40,10 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'geeksphone-kernel-zero' \
 -e 'prebuilts_clang_kernel' \
 -e 'sm8450-devicetrees' \
+-e 'sm8475-devicetrees' \
 -e 'sm8550-devicetrees' \
 -e 'sm8450-modules' \
+-e 'sm8475-modules' \
 -e 'sm8550-modules' \
 | sed -e 's#  <project name="LineageOS/##g' -e 's#" />##g'`
 
