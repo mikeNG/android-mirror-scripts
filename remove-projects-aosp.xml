@@ -58,6 +58,8 @@
   <remove-project name="kernel/prebuilts/5.15/x86-64" />
   <remove-project name="kernel/prebuilts/6.1/arm64" />
   <remove-project name="kernel/prebuilts/6.1/x86-64" />
+  <remove-project name="kernel/prebuilts/6.6/arm64" />
+  <remove-project name="kernel/prebuilts/6.6/x86-64" />
   <remove-project name="kernel/prebuilts/mainline/arm64" />
   <remove-project name="kernel/prebuilts/mainline/x86-64" />
   <remove-project name="platform/prebuilts/qemu-kernel" />
@@ -180,6 +182,7 @@
   <remove-project name="platform/prebuilts/swig/darwin-x86" />
   <remove-project name="toolchain/prebuilts/ndk-darwin/r21" />
   <remove-project name="toolchain/prebuilts/ndk-darwin/r23" />
+  <remove-project name="toolchain/prebuilts/ndk-darwin/r25" />
 
   <!-- windows host -->
   <remove-project name="platform/prebuilts/clang/host/windows-x86" />
@@ -202,8 +205,10 @@
   <remove-project name="trusty/app/confirmationui" />
   <remove-project name="trusty/app/gatekeeper" />
   <remove-project name="trusty/app/keymaster" />
+  <remove-project name="trusty/app/keymint" />
   <remove-project name="trusty/app/nvram" />
   <remove-project name="trusty/app/sample" />
+  <remove-project name="trusty/app/secretkeeper" />
   <remove-project name="trusty/app/storage" />
   <remove-project name="trusty/device/arm/generic-arm64" />
   <remove-project name="trusty/device/arm/vexpress-a15" />
@@ -215,8 +220,13 @@
   <remove-project name="trusty/external/musl" />
   <remove-project name="trusty/external/qemu" />
   <remove-project name="trusty/external/qemu-keycodemapdb" />
+  <remove-project name="trusty/external/qemu-libslirp" />
+  <remove-project name="trusty/external/qemu-meson" />
   <remove-project name="trusty/external/trusted-firmware-a" />
   <remove-project name="trusty/external/trusty" />
+  <remove-project name="trusty/host/aidl" />
+  <remove-project name="trusty/host/common" />
+  <remove-project name="trusty/interfaces" />
   <remove-project name="trusty/lib" />
   <remove-project name="trusty/lk/common" />
   <remove-project name="trusty/lk/nxp" />
@@ -253,4 +263,6 @@
   <remove-project name="toolchain/prebuilts/ndk/r21" />
   <remove-project name="toolchain/prebuilts/ndk/r23" />
   <remove-project name="toolchain/prebuilts/ndk/r24" />
+  <remove-project name="toolchain/prebuilts/ndk/r25" />
+  <remove-project name="toolchain/prebuilts/ndk/r26" />
 </manifest>
