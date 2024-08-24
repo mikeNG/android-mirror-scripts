@@ -24,6 +24,7 @@
   <remove-project name="device/google/bluejay-kernel" />
   <remove-project name="device/google/bonito-kernel" />
   <remove-project name="device/google/bramble-kernel" />
+  <remove-project name="device/google/caimito-kernels/6.1" />
   <remove-project name="device/google/coral-kernel" />
   <remove-project name="device/google/crosshatch-kernel" />
   <remove-project name="device/google/cuttlefish_kernel" />
