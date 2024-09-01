@@ -20,8 +20,10 @@
   <remove-project name="device/asus/flo-kernel" />
   <remove-project name="device/asus/fugu-kernel" />
   <remove-project name="device/google/akita-kernel" />
+  <remove-project name="device/google/akita-kernels/5.15" />
   <remove-project name="device/google/barbet-kernel" />
   <remove-project name="device/google/bluejay-kernel" />
+  <remove-project name="device/google/bluejay-kernels/5.10" />
   <remove-project name="device/google/bonito-kernel" />
   <remove-project name="device/google/bramble-kernel" />
   <remove-project name="device/google/caimito-kernels/6.1" />
@@ -30,15 +32,21 @@
   <remove-project name="device/google/cuttlefish_kernel" />
   <remove-project name="device/google/dragon-kernel" />
   <remove-project name="device/google/felix-kernel" />
+  <remove-project name="device/google/felix-kernels/5.10" />
   <remove-project name="device/google/lynx-kernel" />
+  <remove-project name="device/google/lynx-kernels/5.10" />
   <remove-project name="device/google/marlin-kernel" />
   <remove-project name="device/google/pantah-kernel" />
+  <remove-project name="device/google/pantah-kernels/5.10" />
   <remove-project name="device/google/raviole-kernel" />
+  <remove-project name="device/google/raviole-kernels/5.10" />
   <remove-project name="device/google/redbull-kernel" />
   <remove-project name="device/google/redfin-kernel" />
   <remove-project name="device/google/shusky-kernel" />
+  <remove-project name="device/google/shusky-kernels/5.15" />
   <remove-project name="device/google/sunfish-kernel" />
   <remove-project name="device/google/tangorpro-kernel" />
+  <remove-project name="device/google/tangorpro-kernels/5.10" />
   <remove-project name="device/google/wahoo-kernel" />
   <remove-project name="device/htc/flounder-kernel" />
   <remove-project name="device/huawei/angler-kernel" />
@@ -61,6 +69,20 @@
   <remove-project name="kernel/prebuilts/6.1/x86-64" />
   <remove-project name="kernel/prebuilts/6.6/arm64" />
   <remove-project name="kernel/prebuilts/6.6/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/4.19/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/4.19/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.10/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.10/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.15/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.15/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.4/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.4/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.1/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.1/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.6/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.6/x86-64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" />
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" />
   <remove-project name="kernel/prebuilts/mainline/arm64" />
   <remove-project name="kernel/prebuilts/mainline/x86-64" />
   <remove-project name="platform/prebuilts/qemu-kernel" />
@@ -147,6 +169,7 @@
   <remove-project name="platform/prebuilts/fullsdk-darwin/build-tools/31.0.0" />
   <remove-project name="platform/prebuilts/fullsdk-darwin/build-tools/32.0.0" />
   <remove-project name="platform/prebuilts/fullsdk-darwin/build-tools/32.1.0" />
+  <remove-project name="platform/prebuilts/fullsdk-darwin/cmdline-tools" />
   <remove-project name="platform/prebuilts/fullsdk-darwin/platform-tools" />
   <remove-project name="platform/prebuilts/fullsdk-darwin/tools" />
   <remove-project name="platform/prebuilts/fullsdk/build-tools/21-darwin" />
@@ -184,8 +207,10 @@
   <remove-project name="toolchain/prebuilts/ndk-darwin/r21" />
   <remove-project name="toolchain/prebuilts/ndk-darwin/r23" />
   <remove-project name="toolchain/prebuilts/ndk-darwin/r25" />
+  <remove-project name="toolchain/prebuilts/ndk-darwin/r27" />
 
   <!-- windows host -->
+  <remove-project name="platform/prebuilts/bazel/windows-x86_64" />
   <remove-project name="platform/prebuilts/clang/host/windows-x86" />
   <remove-project name="platform/prebuilts/clang/host/windows-x86_32" />
   <remove-project name="platform/prebuilts/cmake/windows-x86" />
@@ -213,6 +238,7 @@
   <remove-project name="trusty/app/storage" />
   <remove-project name="trusty/device/arm/generic-arm64" />
   <remove-project name="trusty/device/arm/vexpress-a15" />
+  <remove-project name="trusty/device/desktop" />
   <remove-project name="trusty/device/nxp/imx6ul" />
   <remove-project name="trusty/device/nxp/imx7d" />
   <remove-project name="trusty/device/nxp/imx8m" />
@@ -234,6 +260,7 @@
   <remove-project name="trusty/lk/trusty" />
   <remove-project name="trusty/manifest" />
   <remove-project name="trusty/prebuilts/aosp" />
+  <remove-project name="trusty/user/desktop" />
   <remove-project name="trusty/vendor/google/aosp" />
 
   <!-- various big prebuilts -->
@@ -266,4 +293,5 @@
   <remove-project name="toolchain/prebuilts/ndk/r24" />
   <remove-project name="toolchain/prebuilts/ndk/r25" />
   <remove-project name="toolchain/prebuilts/ndk/r26" />
+  <remove-project name="toolchain/prebuilts/ndk/r27" />
 </manifest>
