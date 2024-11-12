@@ -8,10 +8,15 @@ export REPO_TRACE=0
 # Default to repo sync -j64
 SYNC_JOBS=64
 
+SYNC_GITLAB_MUPPETS=
+
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -j | --jobs )
                 SYNC_JOBS="${2}";
+                ;;
+        -g | --sync-gitlab-muppets )
+                SYNC_GITLAB_MUPPETS=true
                 ;;
     esac
     shift
@@ -75,6 +80,8 @@ pushd ${MIRROR_ROOT}/muppets
 repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle
 popd
 
-pushd ${MIRROR_ROOT}/the-muppets
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle
-popd
+if [[ "${SYNC_GITLAB_MUPPETS}" == "true" ]]; then
+	pushd ${MIRROR_ROOT}/the-muppets
+	repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle
+	popd
+fi
