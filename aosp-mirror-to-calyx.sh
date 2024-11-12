@@ -6,7 +6,9 @@ MIRROR_ROOT="${SCRIPT_PATH}/../.."
 AOSP_MIRROR=${MIRROR_ROOT}/aosp
 CALYX_MIRROR=${MIRROR_ROOT}/calyx
 
-projects=`find ${AOSP_MIRROR}/platform/ -type d -name "*.git" | sed s#${AOSP_MIRROR}/##g | sed s#.git##g | sed s#/#_#g`
+pushd ${AOSP_MIRROR}
+projects=`repo list --path-only | sed s#/#_#g`
+popd
 
 aosp_project() {
 	aosp_project_name=`echo $1 | sed s#_#/#g | sed s#libhardware/legacy#libhardware_legacy#g | sed s#update/engine#update_engine#g | sed s#sound/trigger/hal#sound_trigger_hal#g`
