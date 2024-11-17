@@ -7,7 +7,7 @@ AOSP_MIRROR=${MIRROR_ROOT}/aosp
 LINEAGE_MIRROR=${MIRROR_ROOT}/lineage
 
 pushd ${AOSP_MIRROR}
-projects=`repo list --path-only | sed s#platform/#android/#g | sed s#/#_#g`
+projects=`repo list --path-only | sed s#platform/#android/#g | sed s#^device#android_device#g | sed s#^kernel#android_kernel#g | sed s#/#_#g`
 popd
 
 aosp_project() {
