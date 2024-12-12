@@ -18,8 +18,11 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'kernel_nvidia_cypress-fmac' \
 -e 'kernel_nvidia_display' \
 -e 'kernel_nvidia_exfat' \
+-e 'kernel_nvidia_hwpm' \
+-e 'kernel_nvidia_lineage-oot' \
 -e 'kernel_nvidia_linux-4.9_kernel_nvgpu' \
 -e 'kernel_nvidia_linux-4.9_kernel_nvidia' \
+-e 'kernel_nvidia_linux-firmware' \
 -e 'kernel_nvidia_mainline' \
 -e 'kernel_nvidia_nvgpu' \
 -e 'kernel_nvidia_nvidia' \
