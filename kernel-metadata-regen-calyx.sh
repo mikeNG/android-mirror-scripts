@@ -14,6 +14,8 @@ kernels=`grep 'CalyxOS/kernel' ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'kernel_devices' \
 -e 'kernel_manifest' \
 -e 'techpack_audio' \
+-e 'techpack_camera' \
+-e 'techpack_display' \
 | sed -e 's#  <project name="CalyxOS/##g' -e 's#" />##g'`
 
 echo -e "declare -A kernel_map\n" > ${KERNEL_MIRROR_MANIFEST}/calyx-metadata
