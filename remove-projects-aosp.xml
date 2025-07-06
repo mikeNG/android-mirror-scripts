@@ -56,6 +56,7 @@
   <remove-project name="device/google/tangorpro-kernel" />
   <remove-project name="device/google/tangorpro-kernels/5.10" />
   <remove-project name="device/google/tangorpro-kernels/6.1" />
+  <remove-project name="device/google/tegu-kernels/6.1" />
   <remove-project name="device/google/wahoo-kernel" />
   <remove-project name="device/htc/flounder-kernel" />
   <remove-project name="device/huawei/angler-kernel" />
