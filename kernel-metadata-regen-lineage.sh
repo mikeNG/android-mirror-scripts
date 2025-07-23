@@ -15,6 +15,7 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'kernel_asus_tf700t' \
 -e 'kernel_configs' \
 -e 'kernel_letv_msm8994' \
+-e 'kernel_mainline_configs' \
 -e 'kernel_nvidia_cypress-fmac' \
 -e 'kernel_nvidia_display' \
 -e 'kernel_nvidia_exfat' \
@@ -45,9 +46,13 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'sm8450-devicetrees' \
 -e 'sm8475-devicetrees' \
 -e 'sm8550-devicetrees' \
+-e 'sm8650-devicetrees' \
+-e 'sm8750-devicetrees' \
 -e 'sm8450-modules' \
 -e 'sm8475-modules' \
 -e 'sm8550-modules' \
+-e 'sm8650-modules' \
+-e 'sm8750-modules' \
 | sed -e 's#  <project name="LineageOS/##g' -e 's#" />##g'`
 
 echo -e "declare -A kernel_map\n" > ${KERNEL_MIRROR_MANIFEST}/lineage-metadata
