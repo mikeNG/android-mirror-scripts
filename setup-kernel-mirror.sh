@@ -10,7 +10,7 @@ GOOGLE_COMMON=aosp/kernel/common.git
 
 MIRRORS="linux aosp caf"
 
-AOSP_PROJECTS="kernel/arm64 kernel/exynos kernel/goldfish kernel/gs kernel/hikey-linaro kernel/mediatek kernel/msm kernel/omap kernel/samsung kernel/tegra kernel/x86_64 kernel/x86"
+AOSP_PROJECTS="kernel/arm64 kernel/common kernel/exynos kernel/goldfish kernel/gs kernel/hikey-linaro kernel/mediatek kernel/msm kernel/omap kernel/samsung kernel/tegra kernel/x86_64 kernel/x86"
 CLO_PROJECTS="kernel/msm kernel/msm-3.10 kernel/msm-3.18 kernel/msm-4.4 kernel/msm-4.9 kernel/msm-4.14 kernel/msm-4.19 kernel/msm-5.4 kernel/msm-5.10 kernel/msm-5.15"
 
 for mirror in ${MIRRORS}; do
