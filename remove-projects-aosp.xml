@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!-- add missing kernel repos -->
+  <project name="kernel/devices/google/shusky" />
+
   <!-- kernel sources -->
   <remove-project name="kernel/arm64" />
   <remove-project name="kernel/common" />
