@@ -14,6 +14,7 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'hardware_nvidia' \
 -e 'kernel_asus_tf700t' \
 -e 'kernel_configs' \
+-e 'kernel_google_gs-6.1' \
 -e 'kernel_letv_msm8994' \
 -e 'kernel_mainline_configs' \
 -e 'kernel_nvidia_cypress-fmac' \

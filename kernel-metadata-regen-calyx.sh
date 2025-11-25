@@ -12,6 +12,8 @@ kernels=`grep 'CalyxOS/kernel' ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'kernel_build' \
 -e 'kernel_configs' \
 -e 'kernel_devices' \
+-e 'kernel_google-modules' \
+-e 'kernel_google_gs-6.1' \
 -e 'kernel_manifest' \
 -e 'techpack_audio' \
 -e 'techpack_camera' \
