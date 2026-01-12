@@ -44,11 +44,13 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'htc-kernel-msm8660' \
 -e 'geeksphone-kernel-zero' \
 -e 'prebuilts_clang_kernel' \
+-e 'sm7435-devicetrees' \
 -e 'sm8450-devicetrees' \
 -e 'sm8475-devicetrees' \
 -e 'sm8550-devicetrees' \
 -e 'sm8650-devicetrees' \
 -e 'sm8750-devicetrees' \
+-e 'sm7435-modules' \
 -e 'sm8450-modules' \
 -e 'sm8475-modules' \
 -e 'sm8550-modules' \
