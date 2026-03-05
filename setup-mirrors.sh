@@ -49,6 +49,12 @@ for aosp_folder in ${AOSP_FOLDERS}; do
 	fi
 done
 
+if [ ! -d .repo/local_manifests ] ; then
+	mkdir -p .repo/local_manifests
+
+	ln -s ../../../scripts/scripts/remove-projects-lineage.xml .repo/local_manifests/remove-projects.xml
+fi
+
 if [ ! -L The-Muppets ] ; then
 	ln -s ../the-muppets/The-Muppets The-Muppets
 fi
