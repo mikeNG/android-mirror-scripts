@@ -24,7 +24,7 @@ done
 
 # Sync the scripts and required manifests
 pushd ${MIRROR_ROOT}/scripts
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-interleaved
+repo sync -j"${SYNC_JOBS}" --fail-fast --no-interleaved
 
 scripts/kernel-metadata-regen-lineage.sh
 scripts/kernel-metadata-regen-calyx.sh
@@ -32,27 +32,27 @@ popd
 
 # Sync linux and linux-stable kernels
 pushd ${MIRROR_ROOT}/kernel/linux
-repo sync -vv --fail-fast --no-interleaved torvalds/linux
-repo sync -vv --fail-fast --no-interleaved stable/linux
+repo sync --fail-fast --no-interleaved torvalds/linux
+repo sync --fail-fast --no-interleaved stable/linux
 popd
 
 # Sync google kernels
 pushd ${MIRROR_ROOT}/kernel/aosp
-repo sync -vv --fail-fast --no-interleaved kernel/common
+repo sync --fail-fast --no-interleaved kernel/common
 
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-interleaved
+repo sync -j"${SYNC_JOBS}" --fail-fast --no-interleaved
 popd
 
 # Sync qcom kernels
 pushd ${MIRROR_ROOT}/kernel/caf
 # TODO: fix this once repo supports refs removal in git config
-#repo sync -j"${SYNC_JOBS}" -vv --fail-fast
+#repo sync -j"${SYNC_JOBS}" --fail-fast
 ls -d kernel/*.git | parallel -j"${SYNC_JOBS}" git -C {} fetch clo
 popd
 
 # Sync AOSP mirror
 pushd ${MIRROR_ROOT}/aosp
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-interleaved
+repo sync -j"${SYNC_JOBS}" --fail-fast --no-interleaved
 popd
 
 # Sync LineageOS mirror and set up alternates to AOSP and kernel mirrors
@@ -62,7 +62,7 @@ scripts/kernel-mirror-to-lineage.sh
 popd
 
 pushd ${MIRROR_ROOT}/lineage
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle --no-interleaved
+repo sync -j"${SYNC_JOBS}" --fail-fast --no-clone-bundle --no-interleaved
 popd
 
 # Sync CalyxOS mirror and set up alternates to AOSP and kernel mirrors
@@ -72,16 +72,16 @@ scripts/kernel-mirror-to-calyx.sh
 popd
 
 pushd ${MIRROR_ROOT}/calyx
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle --no-interleaved
+repo sync -j"${SYNC_JOBS}" --fail-fast --no-clone-bundle --no-interleaved
 popd
 
 # Sync proprietary files mirrors
 pushd ${MIRROR_ROOT}/muppets
-repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle --no-interleaved
+repo sync -j"${SYNC_JOBS}" --fail-fast --no-clone-bundle --no-interleaved
 popd
 
 if [[ "${SYNC_GITLAB_MUPPETS}" == "true" ]]; then
 	pushd ${MIRROR_ROOT}/the-muppets
-	repo sync -j"${SYNC_JOBS}" -vv --fail-fast --no-clone-bundle --no-interleaved
+	repo sync -j"${SYNC_JOBS}" --fail-fast --no-clone-bundle --no-interleaved
 	popd
 fi
