@@ -45,6 +45,7 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'htc-kernel-msm8660' \
 -e 'geeksphone-kernel-zero' \
 -e 'prebuilts_clang_kernel' \
+-e 'cq8725s-devicetrees' \
 -e 'qcs8550-devicetrees' \
 -e 'sm6475-devicetrees' \
 -e 'sm7435-devicetrees' \
@@ -54,6 +55,7 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'sm8635-devicetrees' \
 -e 'sm8650-devicetrees' \
 -e 'sm8750-devicetrees' \
+-e 'cq8725s-modules' \
 -e 'qcs8550-modules' \
 -e 'sm6475-modules' \
 -e 'sm7435-modules' \
