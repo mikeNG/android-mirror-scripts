@@ -31,6 +31,7 @@ kernels=`grep kernel ${MIRROR_MANIFEST}/default.xml | grep -v \
 -e 'kernel_nvidia_nvidia' \
 -e 'kernel_nvidia_wireguard' \
 -e 'kernel_nvidia_nvethernetrm' \
+-e 'kernel_nvidia_tegra-build' \
 -e 'kernel_oppo_msm8226' \
 -e 'kernel_qcom_msm8974' \
 -e 'kernel_samsung_kyleproxx' \
