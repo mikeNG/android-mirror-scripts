@@ -11,7 +11,7 @@ projects=`repo list --path-only | sed s#/#_#g`
 popd
 
 aosp_project() {
-	aosp_project_name=`echo $1 | sed s#_#/#g | sed s#libhardware/legacy#libhardware_legacy#g | sed s#update/engine#update_engine#g | sed s#sound/trigger/hal#sound_trigger_hal#g`
+	aosp_project_name=`echo $1 | sed s#_#/#g | sed s#libhardware/legacy#libhardware_legacy#g | sed s#update/engine#update_engine#g | sed s#sound/trigger/hal#sound_trigger_hal#g | sed s#wpa/supplicant#wpa_supplicant#g`
 	echo ${AOSP_MIRROR}/${aosp_project_name}.git
 }
 
